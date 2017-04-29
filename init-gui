@@ -1,0 +1,17 @@
+[Unit]
+Description=GUI for GenieACS
+After=network.target
+Requires=genieacs-cwmp.service
+Requires=genieacs-nbi.service
+Requires=genieacs-fs.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/genieacs-gui
+ExecStart=/root/.rbenv/shims/bundle exec rails s -e development --bind 0.0.0.0 --port 80
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+
