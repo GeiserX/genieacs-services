@@ -1,0 +1,13 @@
+[Unit]
+Description=CWMP server service for GenieACS
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/genieacs/bin/
+ExecStart=/opt/genieacs/bin/genieacs-cwmp --config-file /opt/genieacs/config.json
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
