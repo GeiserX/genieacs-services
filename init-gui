@@ -6,7 +6,7 @@ Requires=genieacs-nbi.service
 Requires=genieacs-fs.service
 
 [Service]
-Type=forking
+Type=simple
 User=root
 PIDFile=/opt/genieacs-gui/tmp/pids/server.pid
 WorkingDirectory=/opt/genieacs-gui
@@ -16,4 +16,3 @@ Restart=on-abort
 
 [Install]
 WantedBy=multi-user.target
-
