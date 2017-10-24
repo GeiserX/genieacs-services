@@ -6,9 +6,11 @@ Requires=genieacs-nbi.service
 Requires=genieacs-fs.service
 
 [Service]
-Type=simple
+Type=forking
 User=root
+PIDFile=/opt/genieacs-gui/tmp/pids/server.pid
 WorkingDirectory=/opt/genieacs-gui
+ExecStartPre=rm -f tmp/pids/server.pid
 ExecStart=/root/.rbenv/shims/bundle exec rails s -e development --bind 0.0.0.0 --port 80
 Restart=on-abort
 
