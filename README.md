@@ -8,8 +8,8 @@ Instructions:
     cp genieacs-nbi.service /etc/systemd/system/
     systemctl enable genieacs-nbi.service
     
-    cp genieacs-nbi.service /etc/systemd/system/
-    systemctl enable genieacs-nbi.service
+    cp genieacs-fs.service /etc/systemd/system/
+    systemctl enable genieacs-fs.service
     
     cp genieacs-gui.service /etc/systemd/system/
     systemctl enable genieacs-gui.service
