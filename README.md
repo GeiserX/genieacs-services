@@ -1,4 +1,4 @@
-# Sytemd service files for GenieACS
+# Systemd service files for GenieACS
 
 Instructions:
 
