@@ -7,7 +7,7 @@ Type=simple
 User=root
 WorkingDirectory=/opt/genieacs/bin/
 ExecStart=/opt/genieacs/bin/genieacs-fs --config-file /opt/genieacs/config.json
-Restart=on-abort
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
