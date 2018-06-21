@@ -13,3 +13,7 @@ Instructions:
     
     cp genieacs-gui.service /etc/systemd/system/
     systemctl enable genieacs-gui.service
+
+In order to see & follow the logs: 
+
+    journalctl -f -u genieacs-X.service
