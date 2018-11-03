@@ -10,7 +10,7 @@ Type=simple
 User=root
 PIDFile=/opt/genieacs-gui/tmp/pids/server.pid
 WorkingDirectory=/opt/genieacs-gui
-ExecStartPre=rm -f tmp/pids/server.pid
+ExecStartPre=rm -f /tmp/pids/server.pid
 ExecStart=/usr/bin/rails s -e development --bind 0.0.0.0 --port 80
 Restart=on-failure
 
