@@ -1,6 +1,6 @@
-# Systemd service files for GenieACS
+# Systemd/Supervisord service files for GenieACS
 
-Instructions:
+## Instructions for Systemd:
 
     cp genieacs-cwmp.service /etc/systemd/system/
     systemctl enable genieacs-cwmp.service
@@ -17,3 +17,7 @@ Instructions:
 In order to see & follow the logs: 
 
     journalctl -f -u genieacs-X.service
+
+## Instructions for Supervisord:
+
+Just copy the `supervisord.conf` file to `/etc/supervisor/conf.d/`
