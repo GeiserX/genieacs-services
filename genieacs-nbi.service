@@ -1,5 +1,5 @@
 [Unit]
-Description=CWMP server service for GenieACS
+Description=NBI server service for GenieACS
 After=network.target
 
 [Service]
