@@ -1,5 +1,7 @@
 # Systemd/Supervisord service files for GenieACS
 
+Recommended way to deploy GenieACS, instructions here: https://github.com/genieacs/genieacs/wiki/Docker-Installation-with-Docker-Compose 
+
 ## Instructions for Systemd:
 
     cp genieacs-cwmp.service /etc/systemd/system/
