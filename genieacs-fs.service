@@ -1,13 +1,12 @@
 [Unit]
-Description=FileServer service for GenieACS
+Description=GenieACS FS
 After=network.target
 
 [Service]
-Type=simple
-User=root
-WorkingDirectory=/opt/genieacs/bin/
-ExecStart=/opt/genieacs/bin/genieacs-fs --config-file /opt/genieacs/config.json
-Restart=on-failure
+User=genieacs
+EnvironmentFile=/opt/genieacs/genieacs.env
+ExecStart=/usr/bin/genieacs-cwmp
+KillMode=process
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
