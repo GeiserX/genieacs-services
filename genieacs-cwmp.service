@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=genieacs
 EnvironmentFile=/opt/genieacs/genieacs.env
-ExecStart=/usr/bin/genieacs-cwmp
+ExecStart=/opt/genieacs/bin/genieacs-cwmp
 KillMode=process
 
 [Install]
