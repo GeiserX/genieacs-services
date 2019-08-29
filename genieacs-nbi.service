@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=genieacs
 EnvironmentFile=/opt/genieacs/genieacs.env
-ExecStart=/opt/genieacs/bin/genieacs-nbi
+ExecStart=/opt/genieacs/dist/bin/genieacs-nbi
 KillMode=process
 
 [Install]
