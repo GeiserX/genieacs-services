@@ -17,8 +17,8 @@ Recommended way to deploy GenieACS, instructions here: https://github.com/geniea
     cp genieacs-fs.service /etc/systemd/system/
     systemctl enable genieacs-fs.service
     
-    cp genieacs-gui.service /etc/systemd/system/
-    systemctl enable genieacs-gui.service
+    cp genieacs-ui.service /etc/systemd/system/
+    systemctl enable genieacs-ui.service
 
 In order to see & follow the logs: 
 
