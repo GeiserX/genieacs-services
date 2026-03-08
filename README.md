@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/banner.svg" alt="GenieACS Services banner" width="900"/>
+</p>
+
 # Systemd/Supervisord service files for GenieACS
 
 Recommended way to deploy GenieACS, instructions here: https://github.com/genieacs/genieacs/wiki/Docker-Installation-with-Docker-Compose 
