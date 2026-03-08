@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/banner.svg" alt="GenieACS Services banner" width="900"/>
+</p>
+
 # Systemd/Supervisord service files for GenieACS
 
 Recommended way to deploy GenieACS, instructions here: https://github.com/genieacs/genieacs/wiki/Docker-Installation-with-Docker-Compose 
@@ -13,8 +17,8 @@ Recommended way to deploy GenieACS, instructions here: https://github.com/geniea
     cp genieacs-fs.service /etc/systemd/system/
     systemctl enable genieacs-fs.service
     
-    cp genieacs-gui.service /etc/systemd/system/
-    systemctl enable genieacs-gui.service
+    cp genieacs-ui.service /etc/systemd/system/
+    systemctl enable genieacs-ui.service
 
 In order to see & follow the logs: 
 
