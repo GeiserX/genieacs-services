@@ -2,11 +2,19 @@
   <img src="docs/images/banner.svg" alt="GenieACS Services banner" width="900"/>
 </p>
 
-# Systemd/Supervisord service files for GenieACS
+<h1 align="center">GenieACS Services</h1>
 
-[![GitHub Stars](https://img.shields.io/github/stars/GeiserX/genieacs-services?style=flat-square&logo=github)](https://github.com/GeiserX/genieacs-services/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/GeiserX/genieacs-services?style=flat-square&logo=github)](https://github.com/GeiserX/genieacs-services/network/members) [![License](https://img.shields.io/github/license/GeiserX/genieacs-services?style=flat-square)](https://github.com/GeiserX/genieacs-services/blob/master/LICENSE)
+<p align="center">
+  <a href="https://github.com/GeiserX/genieacs-services/stargazers"><img src="https://img.shields.io/github/stars/GeiserX/genieacs-services?style=flat-square&logo=github" alt="GitHub Stars"/></a>
+  <a href="https://github.com/GeiserX/genieacs-services/network/members"><img src="https://img.shields.io/github/forks/GeiserX/genieacs-services?style=flat-square&logo=github" alt="GitHub Forks"/></a>
+  <a href="https://github.com/GeiserX/genieacs-services/blob/master/LICENSE"><img src="https://img.shields.io/github/license/GeiserX/genieacs-services?style=flat-square" alt="License"/></a>
+</p>
 
-Recommended way to deploy GenieACS, instructions here: https://github.com/genieacs/genieacs/wiki/Docker-Installation-with-Docker-Compose 
+<p align="center"><strong>Systemd and Supervisord service files for GenieACS.</strong></p>
+
+---
+
+Recommended way to deploy GenieACS, instructions here: https://github.com/genieacs/genieacs/wiki/Docker-Installation-with-Docker-Compose
 
 ## Instructions for Systemd:
 
