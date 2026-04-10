@@ -49,4 +49,4 @@ This project is part of a broader set of tools for working with GenieACS:
 | [genieacs-mcp](https://github.com/GeiserX/genieacs-mcp) | MCP Server | AI-assisted device management via Model Context Protocol |
 | [genieacs-ha](https://github.com/GeiserX/genieacs-ha) | HA Integration | Home Assistant integration for TR-069 monitoring |
 | [n8n-nodes-genieacs](https://github.com/GeiserX/n8n-nodes-genieacs) | n8n Node | Workflow automation for GenieACS |
-| [genieacs-sim-docker](https://github.com/GeiserX/genieacs-sim-docker) | Simulator | Docker-based GenieACS simulator for testing |
+| [genieacs-sim-container](https://github.com/GeiserX/genieacs-sim-container) | Simulator | Docker-based GenieACS simulator for testing |
