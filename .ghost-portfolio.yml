@@ -1,0 +1,3 @@
+description: "Systemd and Supervisord service files for GenieACS processes. The recommended way to deploy GenieACS in production environments."
+personalNote: "Used by the GenieACS Container repository, but also useful in case you want to deploy it the ol' style (VMs)."
+techStack: "Shell, Systemd, Supervisord"
