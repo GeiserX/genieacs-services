@@ -1,52 +1,39 @@
 <p align="center">
-  <img src="docs/images/banner.svg" alt="GenieACS Services banner" width="900"/>
+  <img src="docs/images/banner.svg" alt="GenieACS Services" width="900"/>
 </p>
 
 <h1 align="center">GenieACS Services</h1>
 
 <p align="center">
+  <a href="https://github.com/GeiserX/genieacs-services/tags"><img src="https://img.shields.io/github/v/tag/GeiserX/genieacs-services?style=flat-square" alt="Tag"/></a>
+  <a href="https://github.com/GeiserX/genieacs-services/blob/main/LICENSE"><img src="https://img.shields.io/github/license/GeiserX/genieacs-services?style=flat-square" alt="License"/></a>
   <a href="https://github.com/GeiserX/genieacs-services/stargazers"><img src="https://img.shields.io/github/stars/GeiserX/genieacs-services?style=flat-square&logo=github" alt="GitHub Stars"/></a>
-  <a href="https://github.com/GeiserX/genieacs-services/network/members"><img src="https://img.shields.io/github/forks/GeiserX/genieacs-services?style=flat-square&logo=github" alt="GitHub Forks"/></a>
-  <a href="https://github.com/GeiserX/genieacs-services/blob/master/LICENSE"><img src="https://img.shields.io/github/license/GeiserX/genieacs-services?style=flat-square" alt="License"/></a>
 </p>
 
 <p align="center"><strong>Systemd and Supervisord service files for GenieACS.</strong></p>
 
----
+If you would rather run GenieACS in Docker or Kubernetes, use [genieacs-container](https://github.com/GeiserX/genieacs-container); these files are for bare-metal installs.
 
-Recommended way to deploy GenieACS, instructions here: https://github.com/genieacs/genieacs/wiki/Docker-Installation-with-Docker-Compose
+## Quick start
 
-## Instructions for Systemd:
+On a host where GenieACS is installed under `/opt/genieacs` and a `genieacs` user exists:
 
-    cp genieacs-cwmp.service /etc/systemd/system/
-    systemctl enable genieacs-cwmp.service
-    
-    cp genieacs-nbi.service /etc/systemd/system/
-    systemctl enable genieacs-nbi.service
-    
-    cp genieacs-fs.service /etc/systemd/system/
-    systemctl enable genieacs-fs.service
-    
-    cp genieacs-ui.service /etc/systemd/system/
-    systemctl enable genieacs-ui.service
+```bash
+git clone https://github.com/GeiserX/genieacs-services && cd genieacs-services
+sudo cp genieacs-*.service /etc/systemd/system/ && sudo systemctl daemon-reload
+sudo systemctl enable --now genieacs-cwmp genieacs-nbi genieacs-fs genieacs-ui
+```
 
-In order to see & follow the logs: 
+Follow the logs with `journalctl -f -u genieacs-cwmp`. For Supervisord, copy `supervisord.conf` to `/etc/supervisor/conf.d/` instead. The paths each file expects are in [Usage](docs/usage.md).
 
-    journalctl -f -u genieacs-X.service
+## Documentation
 
-## Instructions for Supervisord:
+- [Usage](docs/usage.md): what each file runs, the paths it expects, `run_with_env.sh`, logs, which GenieACS version each tag targets
 
-Just copy the `supervisord.conf` file to `/etc/supervisor/conf.d/`
+## Related projects
 
-## GenieACS Ecosystem
+Part of the GenieACS family: [genieacs-container](https://github.com/GeiserX/genieacs-container), [genieacs-ansible](https://github.com/GeiserX/genieacs-ansible), [genieacs-mcp](https://github.com/GeiserX/genieacs-mcp), [genieacs-ha](https://github.com/GeiserX/genieacs-ha), [genieacs-sim-container](https://github.com/GeiserX/genieacs-sim-container). The full list is in [genieacs-container's related projects](https://github.com/GeiserX/genieacs-container/blob/main/docs/related.md).
 
-This project is part of a broader set of tools for working with GenieACS:
+## License
 
-| Project | Type | Description |
-|---------|------|-------------|
-| [genieacs-container](https://github.com/GeiserX/genieacs-container) | Docker + Helm | Production-ready multi-arch Docker image and Helm chart |
-| [genieacs-ansible](https://github.com/GeiserX/genieacs-ansible) | Ansible Collection | Dynamic inventory plugin and device management modules |
-| [genieacs-mcp](https://github.com/GeiserX/genieacs-mcp) | MCP Server | AI-assisted device management via Model Context Protocol |
-| [genieacs-ha](https://github.com/GeiserX/genieacs-ha) | HA Integration | Home Assistant integration for TR-069 monitoring |
-| [n8n-nodes-genieacs](https://github.com/GeiserX/n8n-nodes-genieacs) | n8n Node | Workflow automation for GenieACS |
-| [genieacs-sim-container](https://github.com/GeiserX/genieacs-sim-container) | Simulator | Docker-based GenieACS simulator for testing |
+[GPL-3.0-or-later](LICENSE)
