@@ -44,7 +44,7 @@ This project is part of a broader set of tools for working with GenieACS:
 
 | Project | Type | Description |
 |---------|------|-------------|
-| [genieacs-docker](https://github.com/GeiserX/genieacs-docker) | Docker + Helm | Production-ready multi-arch Docker image and Helm chart |
+| [genieacs-container](https://github.com/GeiserX/genieacs-container) | Docker + Helm | Production-ready multi-arch Docker image and Helm chart |
 | [genieacs-ansible](https://github.com/GeiserX/genieacs-ansible) | Ansible Collection | Dynamic inventory plugin and device management modules |
 | [genieacs-mcp](https://github.com/GeiserX/genieacs-mcp) | MCP Server | AI-assisted device management via Model Context Protocol |
 | [genieacs-ha](https://github.com/GeiserX/genieacs-ha) | HA Integration | Home Assistant integration for TR-069 monitoring |
