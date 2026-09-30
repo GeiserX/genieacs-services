@@ -22,3 +22,18 @@ updates:
         applies-to: security-updates
         patterns:
           - '*'
+  - package-ecosystem: pip
+    directory: /docs
+    schedule:
+      interval: monthly
+      day: monday
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: docs
+    labels:
+      - dependencies
+      - automated
+    ignore:
+      - dependency-name: '*'
+        update-types:
+          - version-update:semver-major
