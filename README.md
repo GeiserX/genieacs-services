@@ -24,11 +24,17 @@ sudo cp genieacs-*.service /etc/systemd/system/ && sudo systemctl daemon-reload
 sudo systemctl enable --now genieacs-cwmp genieacs-nbi genieacs-fs genieacs-ui
 ```
 
-Follow the logs with `journalctl -f -u genieacs-cwmp`. For Supervisord, copy `supervisord.conf` to `/etc/supervisor/conf.d/` instead. The paths each file expects are in [Usage](docs/usage.md).
+Follow the logs with `journalctl -f -u genieacs-cwmp`. Installing GenieACS where the units look for it, and checking that the four services answer, is in [Getting started](https://geiserx.github.io/genieacs-services/getting-started/). The Supervisord config needs one change before it goes under your distribution's Supervisord. [Usage](https://geiserx.github.io/genieacs-services/usage/#under-the-system-supervisord) has it.
 
 ## Documentation
 
-- [Usage](docs/usage.md): what each file runs, the paths it expects, `run_with_env.sh`, logs, which GenieACS version each tag targets
+The full documentation is at [geiserx.github.io/genieacs-services](https://geiserx.github.io/genieacs-services/).
+
+- [Getting started](https://geiserx.github.io/genieacs-services/getting-started/): install GenieACS where the units look for it, copy the units, check that the four services answer
+- [Usage](https://geiserx.github.io/genieacs-services/usage/): day-to-day systemd commands, updating the files, the two ways to run the Supervisord config, which tag targets which GenieACS version
+- [Configuration](https://geiserx.github.io/genieacs-services/configuration/): the paths and user each file expects, a different install path, the GenieACS environment file
+- [How it works](https://geiserx.github.io/genieacs-services/how-it-works/): what each line of the units and the Supervisord config does, and how the units differ from GenieACS's guide
+- [Troubleshooting](https://geiserx.github.io/genieacs-services/troubleshooting/): symptoms seen on a real install, their cause and the fix
 
 ## Related projects
 
