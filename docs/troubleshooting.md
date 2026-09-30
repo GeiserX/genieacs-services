@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Each entry was reproduced on a real install: Ubuntu 24.04, GenieACS 1.2.16, MongoDB 8.0, Supervisor 4.2.5.
+Each entry except the 203/EXEC one was reproduced on a real install: Ubuntu 24.04, GenieACS 1.2.16, MongoDB 8.0, Supervisor 4.2.5. The 203/EXEC entry comes from systemd.exec(5).
 
 ## The file server never listens on port 7567
 

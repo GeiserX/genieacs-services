@@ -24,10 +24,12 @@
   --md-typeset-a-color: #9be07a;
 }
 
-/* Light scheme: #67b028 on white is 2.7:1, too faint for body links. The
-   mark's dark green #0f8630 is 4.7:1. */
+/* Light scheme: #67b028 on white is 2.7:1, too faint for links. The
+   mark's dark green #0f8630 is 4.7:1, so links use it at rest and on hover. */
 [data-md-color-scheme="default"] {
   --md-typeset-a-color: #0f8630;
+  --md-accent-fg-color: #0f8630;
+  --md-accent-fg-color--transparent: #0f86301a;
 }
 
 /* Fixed logo size so it does not crowd the site name. */

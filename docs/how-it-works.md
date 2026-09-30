@@ -13,7 +13,7 @@ The four units are the ones in GenieACS's [installation guide](https://docs.geni
 
 What each line does:
 
-- `After=network.target` orders the start after the network is up. Nothing orders it after MongoDB, so a service can start while MongoDB is still down; its workers then die and the unit stays `active` (see [Troubleshooting](troubleshooting.md#workers-die-with-mongoserverselectionerror)).
+- `After=network.target` orders the start after the network stack has started. It does not wait for an address or a working connection. Nothing orders it after MongoDB, so a service can start while MongoDB is still down; its workers then die and the unit stays `active` (see [Troubleshooting](troubleshooting.md#workers-die-with-mongoserverselectionerror)).
 - `User=genieacs` runs the service without root.
 - `EnvironmentFile=/opt/genieacs/genieacs.env` loads the settings. systemd reads the file as root, before switching user.
 - `KillMode=process` sends the stop signal to the primary process only; the primary takes its workers down with it, so `systemctl stop` leaves nothing running.
