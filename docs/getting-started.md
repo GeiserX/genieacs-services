@@ -46,7 +46,7 @@ sudo cp genieacs-*.service /etc/systemd/system/ && sudo systemctl daemon-reload
 sudo systemctl enable --now genieacs-cwmp genieacs-nbi genieacs-fs genieacs-ui
 ```
 
-Take the files from `main`. The tags `1.2.8` to `1.2.16` ship a `genieacs-fs.service` that starts `genieacs-cwmp` by mistake; see [Troubleshooting](troubleshooting.md#the-file-server-never-listens-on-port-7567).
+Take the files from tag `1.2.16-1` or `main`. The tags `1.2.8` to `1.2.16` ship a `genieacs-fs.service` that starts `genieacs-cwmp` by mistake; see [Troubleshooting](troubleshooting.md#the-file-server-never-listens-on-port-7567).
 
 ## Check that it works
 

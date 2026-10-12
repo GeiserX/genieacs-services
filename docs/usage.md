@@ -68,13 +68,13 @@ It exports every variable in the env file, then runs the command. The Supervisor
 
 ## Versions
 
-Git tags name the GenieACS version the files target:
+Git tags name the GenieACS version the files target. A `-N` suffix marks a later revision of the files for the same GenieACS version:
 
 | Tag | Notes |
 |---|---|
 | `1.2.0` | GenieACS 1.2.0-beta; the units run from `/opt/genieacs/dist/bin/` |
 | `1.2.8` | its `genieacs-fs.service` starts `genieacs-cwmp` by mistake |
 | `1.2.13` to `1.2.16` | one commit; same `genieacs-fs.service` mistake |
-| `main` | the fixed `genieacs-fs.service`; no tag yet |
+| `1.2.16-1` | GenieACS 1.2.16 with the fixed `genieacs-fs.service`; take this one |
 
 [genieacs-container](https://github.com/GeiserX/genieacs-container) builds its image from tag `1.2.16` and uses only `supervisord.conf` and `run_with_env.sh` from it, so the fs-unit mistake does not reach the image. The `1.1` branch holds the files for GenieACS 1.1.
