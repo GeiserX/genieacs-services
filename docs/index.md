@@ -10,7 +10,7 @@ hide:
 </p>
 
 <p align="center">
-  <a href="https://github.com/GeiserX/genieacs-services/tags"><img alt="Tag" src="https://img.shields.io/github/v/tag/GeiserX/genieacs-services?style=flat-square&sort=semver"></a>
+  <a href="https://github.com/GeiserX/genieacs-services/tags"><img alt="Tag" src="https://img.shields.io/github/v/tag/GeiserX/genieacs-services?style=flat-square"></a>
   <a href="https://github.com/GeiserX/genieacs-services/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/GeiserX/genieacs-services?style=flat-square&logo=github"></a>
   <a href="https://github.com/GeiserX/genieacs-services/blob/main/LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/github/license/GeiserX/genieacs-services?style=flat-square"></a>
 </p>

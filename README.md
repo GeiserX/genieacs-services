@@ -24,6 +24,8 @@ sudo cp genieacs-*.service /etc/systemd/system/ && sudo systemctl daemon-reload
 sudo systemctl enable --now genieacs-cwmp genieacs-nbi genieacs-fs genieacs-ui
 ```
 
+Tags `1.2.8` to `1.2.16` ship a `genieacs-fs.service` that starts `genieacs-cwmp` by mistake. Take tag `1.2.16-1` or `main`.
+
 Follow the logs with `journalctl -f -u genieacs-cwmp`. Installing GenieACS where the units look for it, and checking that the four services answer, is in [Getting started](https://geiserx.github.io/genieacs-services/getting-started/). The Supervisord config needs one change before it goes under your distribution's Supervisord. [Usage](https://geiserx.github.io/genieacs-services/usage/#under-the-system-supervisord) has it.
 
 ## Documentation

@@ -11,9 +11,9 @@ Each entry except the 203/EXEC one was reproduced on a real install: Ubuntu 24.0
 [ERROR] Worker died; ... exitCode=0
 ```
 
-**Cause:** the unit came from a tag between `1.2.8` and `1.2.16`. In those, `genieacs-fs.service` runs `genieacs-cwmp`, which cannot bind the port the real `genieacs-cwmp` already holds. `main` has the fix.
+**Cause:** the unit came from a tag between `1.2.8` and `1.2.16`. In those, `genieacs-fs.service` runs `genieacs-cwmp`, which cannot bind the port the real `genieacs-cwmp` already holds. Tag `1.2.16-1` has the fix.
 
-**Fix:** copy the unit from `main` and restart it.
+**Fix:** copy the unit from tag `1.2.16-1` or `main` and restart it.
 
 ```bash
 grep ExecStart /etc/systemd/system/genieacs-fs.service   # wrong: .../genieacs-cwmp
